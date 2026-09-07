@@ -1,5 +1,5 @@
-import { useAuth } from '../context/AuthContext'
 import { Navigate } from 'react-router-dom'
+import { useAuth } from '../context/AuthContext'
 
 function Login() {
   const { isLoggedIn, loginAsGuest } = useAuth()
@@ -9,7 +9,16 @@ function Login() {
   }
 
   return (
-    <div>
+    <div
+      style={{
+        minHeight: 'calc(100vh - 80px)',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        textAlign: 'center',
+      }}
+    >
       <h1>Login</h1>
 
       <p>Continue as a guest to proceed with checkout.</p>

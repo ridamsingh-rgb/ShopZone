@@ -16,28 +16,25 @@ function App() {
     <>
       <Navbar />
 
-      <Routes>
-        <Route path="/" element={<Home />} />
+      <main className="page-container">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/shop" element={<Shop />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/product/:id" element={<Product />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/login" element={<Login />} />
 
-        <Route path="/shop" element={<Shop />} />
-
-        <Route path="/contact" element={<Contact />} />
-
-        <Route path="/product/:id" element={<Product />} />
-
-        <Route path="/cart" element={<Cart />} />
-
-        <Route path="/login" element={<Login />} />
-
-        <Route
-          path="/checkout"
-          element={
-            <ProtectedRoute>
-              <Checkout />
-            </ProtectedRoute>
-          }
-        />
-      </Routes>
+          <Route
+            path="/checkout"
+            element={
+              <ProtectedRoute>
+                <Checkout />
+              </ProtectedRoute>
+            }
+          />
+        </Routes>
+      </main>
     </>
   )
 }

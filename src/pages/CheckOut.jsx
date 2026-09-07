@@ -10,7 +10,16 @@ function Checkout() {
   }
 
   return (
-    <div>
+    <div
+      style={{
+        minHeight: 'calc(100vh - 80px)',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        textAlign: 'center',
+      }}
+    >
       <h1>Checkout</h1>
 
       <p>Items: {totalItems}</p>
